@@ -1,0 +1,34 @@
+fetch_data_task:
+  description: >
+    Retrieve comprehensive historical data for {stock} from reliable financial APIs.
+    Ensure the data includes prices, volumes, and relevant indicators over the specified time frame.
+  expected_output: >
+    A well-structured dataset containing historical stock prices, volumes, and additional relevant information.
+  agent: data_retriever
+
+analyze_data_task:
+  description: >
+    Analyze the fetched stock data using technical indicators such as Moving Averages,
+    Relative Strength Index (RSI), and Moving Average Convergence Divergence (MACD).
+    Provide insights on trends and potential trading signals.
+  expected_output: >
+    A dictionary containing calculated indicators (MA, RSI, MACD) and insights on stock trends.
+  agent: technical_analyst
+
+# visualize_data_task:
+#   description: >
+#     Create visualizations of the stock price data alongside calculated technical indicators.
+#     Ensure that charts are clear and informative for user interpretation.
+#   expected_output: >
+#     Interactive charts displaying stock prices with overlays of technical indicators.
+#   agent: visualizer
+
+generate_report_task:
+  description: >
+    Compile the analysis results, including insights from technical indicators and visualizations,
+    into a comprehensive report. The report should summarize key findings and provide actionable recommendations.
+  expected_output: >
+    Your final answer MUST be a recommendation for your customer. It should be a full super detailed report, providing a
+    clear investment stance and strategy with supporting evidence.
+    Make it pretty and well formatted for your customer.
+  agent: reporter
